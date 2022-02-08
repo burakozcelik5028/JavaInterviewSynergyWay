@@ -1,6 +1,6 @@
 package com.synergyway.synergywaytask.enums;
 
-public enum FlighStatus {
+public enum FlightStatus {
     ACTIVE,
     COMPLETED,
     DELAYED,
