@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -17,6 +17,6 @@ public class AirCompany {
 
     private String name;
     private String companyType;
-    private LocalDate foundedAt;
+    private LocalDateTime foundedAt;
 
 }

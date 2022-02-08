@@ -5,8 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Getter
@@ -30,10 +30,10 @@ public class Flight {
     private String departureCountry;
     private String destinationCountry;
     private Long distance;
-    private LocalDateTime estimatedFlightTime;
-    private LocalDateTime startedAt;
-    private LocalDateTime endedAt;
-    private LocalDateTime delayStartedAt;
-    private LocalDate createdAt;
+    private LocalTime estimatedFlightTime;
+    private LocalTime startedAt;
+    private LocalTime endedAt;
+    private LocalTime delayStartedAt;
+    private LocalDateTime createdAt;
 
 }
