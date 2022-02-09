@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Transactional
@@ -43,7 +45,7 @@ public class AirCompanyServiceImpl implements AirCompanyService{
     }
 
     @Override
-    public Optional<AirCompany> getAirCompanyByCode(Long airCompanyID) {
+    public Optional<AirCompany> getAirCompanyByID(Long airCompanyID) {
         Optional<AirCompany> airCompany = airCompanyRepository.findById(airCompanyID);
         if (airCompany.isPresent()){
             return airCompany;
@@ -51,5 +53,10 @@ public class AirCompanyServiceImpl implements AirCompanyService{
             throw new RuntimeException("Air Company can not found with this id: " + airCompanyID);
         }
 
+    }
+
+    @Override
+    public List<AirCompany> getAllAirCompanies() {
+        return airCompanyRepository.findAll();
     }
 }

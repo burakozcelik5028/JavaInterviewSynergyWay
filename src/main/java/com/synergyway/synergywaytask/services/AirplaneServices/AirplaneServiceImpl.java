@@ -50,7 +50,7 @@ public class AirplaneServiceImpl implements AirplaneService{
     @Override
     public boolean updateAirCompanyID(Long airplaneID, Long airCompanyID) {
         Optional<Airplane> airplane = airplaneRepository.findById(airplaneID);
-        Optional<AirCompany> airCompany = airCompanyService.getAirCompanyByCode(airCompanyID);
+        Optional<AirCompany> airCompany = airCompanyService.getAirCompanyByID(airCompanyID);
         if (airplane.isPresent() && airCompany.isPresent()){
             airplane.get().setAirCompany(airCompany.get());
             airplaneRepository.save(airplane.get());
